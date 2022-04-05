@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../GlobalContext'
+import { INCREASE_COUNTER } from '../../constants'
 
 const Increase = () => {
+    
+    const { dispatch } = useContext(GlobalContext)
+    
     const handleIncrease = () => {
-        alert('handle Increase')
+        dispatch({
+            type: INCREASE_COUNTER
+        })    
     }
+
     return (
-        <button className='increase-button' onClick={handleIncrease}>Increase</button>
+        <button className='increase-button' onClick={handleIncrease} title='Increase Counter'>Increase</button>
     )
 }
 

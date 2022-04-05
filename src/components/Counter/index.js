@@ -1,9 +1,12 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../GlobalContext'
 
 const Counter = () => {
-  
-    const [counter, setCounter] = useState(0);
-  
+
+    const { state } = useContext(GlobalContext)
+
+    const counter = state.counter
+    
     return (
         <div className='counter'>{counter}</div>
     )
