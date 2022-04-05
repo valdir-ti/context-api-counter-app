@@ -1,22 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { Counter } from './components/Counter';
+import { Decrease } from './components/Decrease';
+import { Increase } from './components/Increase';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h2>Counter App using Context API</h2>
+        <div className='counter-container'>
+          <Counter />
+          <div className='buttons-container'>
+            <Increase />
+            <Decrease />
+          </div>
+        </div>
       </header>
     </div>
   );
