@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { GlobalContext } from '../GlobalContext'
+import { GlobalContext } from '../../context/GlobalContext'
 import { INCREASE_COUNTER } from '../../constants'
 
 const Increase = () => {

@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react'
-import counterReducer from '../../context/CounterReducer'
+import counterReducer from '../CounterReducer'
 
 const initialState = {
     counter: 0
